@@ -21,16 +21,7 @@ def generate_content():
     # generate the file content...
     from generator import mavgen, mavparse
 
-    # path to message_definitions directory
-    if os.getenv("MDEF",None) is not None:
-        mdef_paths = [os.getenv("MDEF")]
-
-    else:
-        mdef_paths = [os.path.join('..', 'message_definitions'),
-                      os.path.join('mavlink', 'message_definitions'),
-                      os.path.join('..', 'mavlink', 'message_definitions'),
-                      os.path.join('message_definitions'),
-        ]
+    mdef_paths = [os.path.join('message_definitions')]
 
     for path in mdef_paths:
         mdef_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), path)
