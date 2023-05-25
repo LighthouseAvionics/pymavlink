@@ -1,0 +1,3 @@
+[submodule "message_definitions"]
+	path = message_definitions
+	url = https://github.com/LighthouseAvionics/lighthouse-mavlink-dialect-definition.git
